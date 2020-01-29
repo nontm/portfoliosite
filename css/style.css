@@ -1,0 +1,355 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/*base
+----------------------------*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	color:#606060;
+	/*font-family: 'Roboto Slab', sans-serif;*/
+	font-family: 'Gelasio',sans-serif;
+	line-height:1.6;
+}
+
+a:link,
+a:visited{
+	color:#606060;
+	text-decoration: none;
+}
+
+a:hover{
+	color:#2a2a2a;
+}
+
+img {
+	max-width:100%;
+	height:auto;
+	vertical-align: bottom;
+}
+	
+/*layout
+----------------------------*/
+
+.wrapper{
+	position:relative;
+	text-align: center;
+}
+
+h1{
+	position:absolute;
+	top: 0;
+	left:55%;
+	padding:15px;
+	color:#f5f5f5;
+	background-color: rgba(0,0,0,0.6);
+
+	}
+
+.keyVisual img{
+	width:100%;
+	height:300px;
+	object-fit: cover;
+}
+
+
+main{
+	max-width:980px;	
+	width:100%;
+	margin:0 auto;
+}
+
+main p{
+	padding:10px;
+	margin:0;
+}
+
+main p a{
+	font-weight: bold;
+}
+main .item{
+	padding:10px 10px 20px;
+
+}
+
+main .twitter-tweet{
+	padding-left:30px;
+}
+
+main ul {
+	list-style-type: circle;
+}
+
+
+main .icon{
+	padding:0 10px;
+}
+
+main h2{
+	padding:20px;
+	font-size:2.2rem;
+	text-align: left;
+}
+
+main h2 span{
+	font-size:1rem;
+	padding:0 10px;
+}
+
+main h3{
+	padding:0 10px;
+	border-left: 5px solid #606060;
+}
+
+.contents{
+	text-align: left;
+	background:#fff;
+	max-width:850px;
+	width:100%;
+	margin:0 auto;
+	padding:10px;
+}
+
+#about img{
+	width:200px;
+}
+
+#about .contacticon{
+	width:30px;
+	margin-left:30px;
+	vertical-align: bottom;
+}
+
+#skills .tableWrap{
+	display: block;
+  	overflow-x: scroll;
+ 	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: none;    /* IE, Edge 対応 */
+	scrollbar-width: none; 
+	padding-bottom: 20px;
+}
+
+#skills .tableWrap::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+	display:none;
+}
+
+#skills table{
+	border-collapse: collapse;
+	width:100%;
+}
+
+#skills th,
+#skills td{
+	border:1px solid #606060;
+	padding:10px;
+	vertical-align: top;
+}
+
+#works em{
+	font-weight: bold;
+}
+
+#works strong{
+	text-decoration: underline;
+}
+
+#works img{
+	max-width:600px;
+	width:100%;
+	margin:0 20px 20px 0;
+}
+
+#works .ss{
+	border:1px solid #b0b0b0;
+}
+
+#works .mobile{
+	width:150px;
+	
+}
+
+#works video{
+	max-width:500px;
+	width:100%;
+}
+
+#others img{
+	width:300px;
+	height:200px;
+	object-fit: cover;
+	margin:20px 20px 0 0;
+}
+
+#others span{
+	padding-top:5px;
+	font-size:0.6rem;
+	display: block;
+}
+
+footer{
+	border-top:6px solid #606060;
+	padding-bottom:20px;
+}
+
+/*drawer icon
+-----------------------*/
+
+#drawer-checkbox{
+	display:none;
+}
+
+#drawer-icon{
+	display: inline-block;
+	position: fixed;
+	left:0;
+	top:0;
+	width:50px;
+	height:50px;
+	cursor:pointer;
+	z-index:300;
+}
+
+#drawer-icon span{
+	display: block;
+	position: absolute;
+	width:36px;
+	height:2px;
+	left:7px;
+	top:24px;
+	border-radius: 4px;
+	background: #606060;
+	
+
+}
+#drawer-icon span:before,
+#drawer-icon span:after{
+	display: block;
+	position: absolute;
+	width:100%;
+	height:100%;
+	background: #606060;
+	border-radius: 4px;
+	content:""; 
+	transition: all 0.3s ease-in-out;
+}
+
+/*位置の調整*/
+
+#drawer-icon span:before{
+	top:-12px;	
+}
+
+#drawer-icon span:after{
+	top:12px;	
+}
+
+
+#drawer-checkbox:checked ~ #drawer-icon span {
+	background:rgba(51,51,51,0);
+	transition: all 0.3s ease-in-out;
+}
+
+#drawer-checkbox:checked ~ #drawer-icon span:before,
+#drawer-checkbox:checked ~ #drawer-icon span:after{
+	top:0;
+}
+
+#drawer-checkbox:checked ~ #drawer-icon span:before{
+	transform: rotate(-45deg);
+	background: #606060;
+}
+
+#drawer-checkbox:checked ~ #drawer-icon span:after{
+	transform: rotate(45deg);
+}
+
+#gNavi{
+	position: fixed;
+	left:0;
+	top:0;
+	width:200px;
+	height:100%;
+	padding-top:50px;
+	background: #fff;
+	transform: translateX(-100%);
+	transition:all 0.3s ease-in-out,0;
+	z-index: 200;
+}
+
+#gNavi ul{
+	width:75%;
+	margin:0 auto;
+	padding:0;
+	text-align: left;;	
+}
+
+#gNavi ul li a{
+	display: block;
+	line-height: 50px;
+}
+
+#drawer-checkbox:checked ~ #gNavi{
+	transform: translateX(0);
+	box-shadow: 6px 0 25px rgba(0,0,0,0.16);
+	transition:all 0.3s ease-in-out;
+}
+
+#drawer-close{
+	display: none;
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0);
+	z-index:100;
+	transition:all 0.3s ease-in-out,0s;
+}
+
+#drawer-checkbox:checked ~ #drawer-close{
+	display: block;
+	background: rgba(0,0,0,0.3);
+}
+
+
+/*contact.php
+------------------------------*/
+
+#contact {
+	max-width:70%;
+	margin:10px auto;
+	padding-bottom:10px;
+}
+
+#contact ul{
+	width:70%;
+	list-style-type: none;
+	margin:0 auto;
+	padding-left:0;
+}
+
+#contact ul li {
+	margin: 10px;
+	text-align: left;
+}
+#contact input,
+#contact textarea{
+	width:100%;
+}
+#contact label{
+	display:block;
+	padding-bottom:5px;
+	text-align: left;
+}
+
+#contact li:last-child{
+	width:100px;
+	margin:0 auto;
+	padding-top:20px;
+}
+
