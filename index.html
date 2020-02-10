@@ -209,7 +209,7 @@
 					<dl>
 						<dt>機能</dt>
 						<dd><i class="fas fa-check icon"></i>受注内容の印刷・別ファイルへの書き込み</dd>
-						<dd><i class="fas fa-check icon"></i>問い合わせ内容の登録・修正・削除</dd>
+						<dd><i class="fas fa-check icon"></i>問い合わせ内容の登録・修正・削除・複製</dd>
 					</dl>
 					<dl>
 						<dt>苦労したポイント</dt>
@@ -223,7 +223,7 @@
 					</dl>
 				</div><!--/.item-->	
 				<div class="item">
-				<h3>2020年1月　架空サイト「少人数英会話教室 STEP UP!」（HTML,CSS,Javascript)</h3>
+				<h3>2020年1月　架空サイト「少人数英会話教室 STEP UP!」（HTML5,CSS3,jQuery3.4.1)</h3>
 					<p><i class="fas fa-angle-double-right"></i><a href="https://site-stepup.herokuapp.com/" target="blank">サイトへのリンク</a></p>
 					<p>英会話教室のコンセプトは、<em>「少人数制ならではの一人ひとりへの手厚いサービス」</em>。こんな教室あったらいいなという気持ちで楽しく制作しました。効果的な学習方法を真剣に考えたり、講師のキャラクター設定も練ったのでぜひお時間があればご一読頂けると幸いです。</p>
 				<p>制作期間：約2週間</p>
@@ -245,7 +245,7 @@
 				</dl>
 				</div><!--/.item-->
 				<div class="item">
-				<h3>2020年1月　自作WEBアプリケーション「Flash Cards」(PHP,MySQL)</h3>
+				<h3>2020年1月　自作WEBアプリケーション「Flash Cards」(PHP7.3.1,MySQL,jQuery3.4.1)</h3>
 				<p>教科書を一冊終えた段階で制作したアプリです。</p>
 				<p>制作時間：9時間</p>
 				<video src="movie/flashcardsmovie.mp4" controls></video>
@@ -270,14 +270,30 @@
 					<blockquote class="twitter-tweet" width="350"><p lang="ja" dir="ltr">単語帳できた。昨日のエラーをクリアして、データベースからランダムに抽出して表示まで。見る人が見たらコードめちゃくちゃやな！ってなるかもですが、力ずくでも自分で考えて完成できて嬉しい😁<a href="https://twitter.com/hashtag/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%88%9D%E5%BF%83%E8%80%85?src=hash&amp;ref_src=twsrc%5Etfw">#プログラミング初心者</a><a href="https://twitter.com/hashtag/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%AD%A6%E7%BF%92?src=hash&amp;ref_src=twsrc%5Etfw">#プログラミング学習</a> <a href="https://t.co/UKm0kBiAe2">pic.twitter.com/UKm0kBiAe2</a></p>&mdash; のんちむ (@nontm_a) <a href="https://twitter.com/nontm_a/status/1214907040906137601?ref_src=twsrc%5Etfw">January 8, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</div><!--/.item-->
 				<div class="item">
-				<h3>2020年1月～2月　自作WEBアプリケーション「EASY WEEKDAY MEAL PLANNER」(PHP,MySQL)(制作中)</h3>
-				<p>現在制作中です。</p>
-				<video src="movie/mealplanner.mp4" controls></video>
+				<h3>2020年1月～2月　自作WEBアプリケーション「EASY WEEKDAY MEAL PLANNER」(PHP7.3.1,MySQL,jQuery3.4.1)</h3>
+				<p>制作時間：10日間（約70時間)</p>
+				<iframe width="500" height="300" src="https://www.youtube.com/embed/xaL-P0bLt4k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<dl>
 					<dt>機能</dt>
-					<dd><i class="fas fa-check icon"></i>一週間の平日の献立を記録できる</dd>
-					<dd><i class="fas fa-check icon"></i>一週間分の献立に必要な食材リストを表示する</dd>
+					<dd><i class="fas fa-check icon"></i>セレクトボックスからメニューを選択</dd>
+					<dd><i class="fas fa-check icon"></i>1週間の献立を登録・閲覧・修正・削除</dd>
+					<dd><i class="fas fa-check icon"></i>1週間分のお買い物リストを作成</dd>
 				</dl>
+				<dl>
+					<dt>こだわりポイント</dt>
+					<dd><i class="fas fa-check icon"></i>スケジュール帳のようなUI</dd>
+					<dd><i class="fas fa-check icon"></i>1週間の献立をスクロールせずに見られる一覧性</dd>
+					<dd><i class="fas fa-check icon"></i>主菜の種類を選ぶと、次のセレクトボックスが絞り込まれる(jQuery,Ajax使用)</dd>
+					<dd><i class="fas fa-check icon"></i>買い物リストに常備しておきたい在庫品チェックも追加</dd>
+					<dd><i class="fas fa-check icon"></i>献立閲覧ページで個別メニューの材料が見られる</dd>
+				</dl>
+				<dl>
+					<dt>苦労したポイント</dt>
+					<dd><i class="fas fa-check icon"></i>買い物リストで材料の総計を算出するプログラム</dd>
+					<dd><i class="fas fa-check icon"></i>データベースのデータの持たせ方と取り出し方を考えること</dd>
+					<dd><i class="fas fa-check icon"></i>繰り返しを使ってコードをシンプルにすること</dd>
+				</dl>
+
 				</div><!--/.item-->
 				<div class="item">
 				<h3>2020年2月　フレームワークを利用したアプリケーション(取組予定)</h3>
